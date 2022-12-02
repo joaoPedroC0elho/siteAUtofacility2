@@ -1,16 +1,10 @@
-const bar = document.getElementById('bar');
-const close = document.getElementById('close');
-const nav = document.getElementById('navbar');
-
-if (bar){
-    bar.addEventListener('click',() =>{
-        nav.classList.add('active')
-    })
-}
-
-
-if (close){
-    close.addEventListener('click',() =>{
-        nav.classList.add('active')
-    })
+function menuShow() {
+    let menuMobile = document.querySelector('.mobile-menu');
+    if (menuMobile.classList.contains('open')) {
+        menuMobile.classList.remove('open');
+        document.querySelector('.icon').src = "img/menu_white_36dp.svg";
+    } else {
+        menuMobile.classList.add('open');
+        document.querySelector('.icon').src = "img/close_white_36dp.svg";
+    }
 }
