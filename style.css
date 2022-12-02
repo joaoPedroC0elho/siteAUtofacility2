@@ -82,10 +82,7 @@ margin: 40px 0;
   bottom: -4px;
   left: 20px;
 }
-#mobile{
-  display: none;
-align-items: center;
-}
+
 
 #hero{
   background-image: url("img/porsche.jpg");
@@ -247,7 +244,7 @@ padding-bottom: 15px;
   justify-content: space-between;
   flex-wrap: wrap ;
   align-items: center;
-  background-image: url("img/newsletter.jpg");
+  background-image: url("D:/newsletter.jpg");
   background-repeat: no-repeat;
   background-position: 20% 30%;
   background-color: blue;
@@ -400,45 +397,98 @@ footer .follow i:hover, footer a:hover{
   
 }
 
+.mobile-menu-icon{
+  display: none;
 
+}
 
-@media (max-width:799px) {
+.mobile-menu{
+  display: none;
+}
+
+.mobile-menu button{
+  display: none;
+}
+
+@media screen and (max-width:799px) {
   .section-p1{
     padding: 40px 40px;
   }
   #navbar{
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-justify-content: flex-start;
-position: fixed;
-top: 0;
-right: -300px;
-height: 100vh;
-width: 300px;
-background-color: #E3E6F3;
-box-shadow: 0 40px 60px rgba(0, 0, 0, 0.3);
-padding:  80pc 0 0 10px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color:aliceblue;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.3);
+    padding:  80pc 0 0 10px;
+    
+    
+      }
+      #navbar li{
+        margin-bottom: 25px;
+      }
+      #navbar .active{
+        right: 0px;
+      }
+     
 
-
-  }
-  #navbar li{
-    margin-bottom: 25px;
-  }
-  #navbar .active{
-    right: 0px;
-  }
-  #mobile{
-    display: flex;
-  align-items: center;
-  }
-  #mobile i {
-    color: azure;
-    font-size: 24px;
-    padding-left: 20px;
-
+  .mobile-menu-icon{
+  display: block;
+  
   }
 
+  .mobile-menu-icon button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+
+.mobile-menu ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 1rem;
+
+}
+
+
+.mobile-menu li a{
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: aliceblue;
+  transition: 0.3s ease;
+
+}
+
+.mobile-menu li a:hover, .mobile-menu li a:active{
+
+
+  color: #084d6e;
+}
+
+.menu li a.active::after{
+  content: "";
+  width: 30%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #084d6e;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+.open{
+  display: block;
+}
   #hero{
    
     height: 70vh;
